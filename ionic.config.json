@@ -1,0 +1,7 @@
+{
+  "name": "form-validate",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
