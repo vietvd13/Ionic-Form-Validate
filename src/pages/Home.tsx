@@ -62,7 +62,7 @@ function joinDate(year: number, month: number, date: number) {
  */
 function validateForm(Form: any) {
   const listPropertyType = ['Flat', 'House', 'Bungalow'];
-  const listFurnitureTypes = ['Furnished', 'Unfurnished', 'Part Furnished'];
+  const listFurnitureTypes = ['Furnished', 'Unfurnished', 'PartFurnished'];
 
   let isValidate = [];
 
@@ -261,7 +261,9 @@ const Home: React.FC = () => {
 
           {/* Start Date and time of adding the Property */}
           <IonItem>
-            <IonLabel position="stacked">Date and time of adding the Property</IonLabel>
+            <IonLabel position="stacked">
+              Date and time of adding the Property
+            </IonLabel>
             <IonDatetime 
               onIonChange={event => setDateTimeAdding(event.detail.value!)} 
               display-format="YYYY/MM/DD" 
@@ -341,7 +343,13 @@ const Home: React.FC = () => {
           {/* End Button Submit */}
 
           {/* Start Toast */}
-          <IonToast isOpen={showToast} header={headerMessage} message={message} color={colorMessage} position="top"></IonToast>
+          <IonToast 
+            isOpen={showToast} 
+            header={headerMessage} 
+            message={message} 
+            color={colorMessage} 
+            position="top"
+          ></IonToast>
           {/* End Toast */}
         </div>
       </IonContent>
